@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>IdealTI</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="contentIndex" id="app">
+        <div class="menu">
+            <nav>
+                <ul>
+                  <li><a href="#">Página inicial</a></li>
+                  <li><a href="./page/Pedido.html">Pedido</a></li>
+                </ul>
+              </nav>
+              <img src="./img/imgIdeal.jpg" alt="" srcset="">
+        </div>
+        <div class="contentIndexInfo">
+            <img class="imgOutdoor" src="./img/img1.jpg" alt="">
+                <select name="" id="">
+                    <option selected disabled value="">Filtro</option>
+                    <option value="Nome">nome</option>
+                    <option value="">nota</option>
+                </select>
+                <div class="card" >
+                    <div class="cards" v-for="info in infos">
+                        <div>
+                            <img src="./img/camisa.jpg" alt="" srcset="">
+                        </div>
+                        <div class="cardsTitle">
+                            {{info.title}}
+                        </div>
+                        <div class="cardsInfoRate">
+                            <div>
+                                R${{info.price}}
+                            </div>
+                            <div>
+                                Nota: {{info.rating.rate}}
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+        </div>
+    </div>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data: {
+                msg:"oiiii21",
+                infos: []
+            },
+            mounted(){
+                axios
+                    .get('https://fakestoreapi.com/products/')
+                    .then(response => this.infos = response.data)
+            },
+            methods: {
+                msgSair:function(){
+                    alert('BTN SAIR ainda não funciona!')
+                }
+            }
+        })
+    </script>  
+</body>
+</html>

@@ -1,36 +1,25 @@
-# Desafio 3 - Vaga de Pessoa Desenvolvedora Frontend Jr
+# IdealTi-Teste-Front
+![NPM](https://img.shields.io/npm/l/react)
 
-Olá para esse desafio estamos buscando alguém que consiga combinar habilidades para:
+# Sobre o projeto
+Este repositório foi criado para colocar em prática os conhecimentos adquiridos nos cursos de HTML, CSS e Javascript para a criação de um projeto para a empresa <b>Ide@l</b>.
 
-- Elaborar wireframes propondo iterações mais objetivas e consistentes entre cliente e sistema;
-- Converter wireframes em componentes e páginas que serão reutilizados pela equipe;
-- Transcrever iterações em funcionalidades junto com o time.
-- Colaborar com a experiência do usuário propondo melhorias no uso do sistema.
+O objetivo do projeto foi criar a interface do site e-commerce de uma loja utilizando uma API e tecnologias como <b>HTML5, CSS3 e JavaScript e Vue.Js</b>, além de englobar os conceitos de: como estruturar um layout, técnicas de CSS3 com containers e variáveis, como posicionar os elementos com Flexbox.
 
-### Desafio
+# Tecnologias utilizadas
 
-Imagine que você conheceu o dono de uma loja, chamado Nicollas Petit e seu estilista Alexs Dubois ambos querendo construir um e-commerce. Eles já possuem todas as informações cadastradas de seus produtos e estão disponibilizando para você em uma [API](https://fakestoreapi.com/). 
+* HTML
+* CSS 
+* Javascript
+* Vue.js
+* Google Fonts 
 
+# Autor
+<b>Marcelo da Silva Belitardo Junior</b>
 
-#### Casos de uso
+Linkedin: https://www.linkedin.com/in/marcelo-junior-59498210a/
 
-1) Exibir listagem de produtos disponibilizando opções de ordenação e filtros por categoria ( 1 ou mais ), se possível disponibilizar filtro por rate (nota do produto).
-   
-2) Disponibilize a opção de selecionar o produto para o carrinho de compra.
+Github: https://github.com/marcelinho21junior
 
-3) Exibir detalhes do carrinho de compra. Mostre o valor total dos produtos, descrição, thumbnail, valor unitário e quantidade.
+email: msbcontjr@outlook.com
 
-#### Requisitos 
-
-- Nesse desafio você não poderá usar um framework css;
-- O projeto deve ser entregue com Vue.js;
-
-
-#### Como enviar
-
-- Crie um fork do projeto;
-- Crie um diretório com seu-nome incluindo o seu nome no formato lowercase usando hífen (-) quando necessário;
-- Crie os arquivos que achar necessário;
-- Envie o PULL-REQUEST;
-- Esperamos que você se divirta e aprenda algo fazendo esse desafio. Se não conseguir algum detalhe, pode nos mandar mesmo assim, que avaliaremos com todo o prazer (e talvez possamos-lhe auxiliar no que faltou).
-- Esse repositório ficará disponível para receber o seu PR até `2022-05-31T23:59:59-03:00`.

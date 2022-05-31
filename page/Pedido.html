@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./Pedido.css">
+    <title>IdealTI</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="contentIndex" id="pedido">
+        <div class="menu">
+            <nav>
+                <ul>
+                  <li><a href="../index.html">Página inicial</a></li>
+                  <li><a href="./Pedido.html">Pedido</a></li>
+                </ul>
+              </nav>
+              <img src="../img/imgIdeal.jpg" alt="" srcset="">
+        </div>
+        <div class="contentIndexInfo contentPedido">
+            <h1 class="headerTitle">Pedido</h1>
+            <div class="contentPedidoCadaster">
+                <div class="contentPedidoCadasterInputs">
+                    <span>Produto</span>
+                    <select v-model="form.nameProd" value="resInfo" id="produtsTitle">
+                        <option v-for="info in infos">{{info.title}}</option>
+                    </select>
+                </div>
+                <div class="contentPedidoCadasterInputs">
+                    <span>Quantidade</span>
+                    <input type="number" placeholder="Quantidade do produto" v-model="form.qtdProd">
+                </div>
+                <div class="contentPedidoButtons">
+                    <button v-on:click="msgSave" class="save">Cadastrar</button>
+                </div>
+            </div>
+            <div class="contentCarrinho">
+                <div class="contentCarrinhoTitleItens">
+                    <span>Nome</span>
+                    <span>Descrição</span>
+                    <span>Vr.Unitário</span>
+                    <span>Qtd</span>
+                    <span>Total</span>
+                    <span>Total</span>
+                </div>
+                <div class="contentCarrinhoAllItens">
+                    <div class="contentCarrinhoItens">
+                        <span>Nome</span>
+                        <span>Descrição</span>
+                        <span>Vr.Unitário</span>
+                        <span>Qtd</span>
+                        <span>Total</span>
+                        <span><button class="contentCarrinhoItensBtnX">X</button><button class="contentCarrinhoItensBtnE">Edit</button></span>
+                    </div>
+            </div>     
+        </div>
+    </div>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        var app = new Vue({
+            el:'#pedido',
+            data(){
+                return{
+                    form:{
+                        nameProd:this.resInfo,
+                        qtdProd:'',
+                    },
+                    infos: []
+                }
+            },
+            mounted(){
+                axios
+                    .get('https://fakestoreapi.com/products/')
+                    .then(response => this.infos = response.data)
+                    
+            },
+            methods: {
+                msgSave:function(){
+                    console.log(this.form)
+                }
+            }
+        })
+    </script>  
+</body>
+</html>
